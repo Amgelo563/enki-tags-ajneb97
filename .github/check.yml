@@ -1,0 +1,49 @@
+name: Test Content
+
+on:
+  push:
+    paths:
+      - content/**
+  pull_request:
+    paths:
+      - content/**
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Test Content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Copy config to bot folder
+        run: cp config.conf enki-bot/config.conf
+
+      - name: Use pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: enki-bot
+
+      - name: Build bot
+        working-directory: enki-bot
+        run: pnpm run build
+
+      - name: Check content
+        working-directory: enki-bot
+        run: pnpm run start:parse

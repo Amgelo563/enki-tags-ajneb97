@@ -1,0 +1,3 @@
+[submodule "enki-bot"]
+	path = enki-bot
+	url = https://github.com/Amgelo563/enki-bot
