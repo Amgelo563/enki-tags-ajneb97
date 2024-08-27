@@ -71,14 +71,18 @@ Luego la incluimos en el `resource-atlas.conf`:
 * Los mensajes deben ser lo más cortos posibles, ya que podrían llenar el chat. En caso un mensaje se está haciendo muy largo, considera usar un botón de tipo `message` o mandar un link a documentación en un botón `url`.
 * El contenido a primera vista de un tag debería ser suficiente para solucionar un problema, y los botones sean información extra o útil, pero no necesaria.
 
-
 ## ✨ Cómo contribuir
 
 ¡Gracias por desear contribuir! Con tu colaboración ayudas a hacer la información más accesible y rápida, tanto como para personas que requieren ayuda como los que la dan.
 
 1. Para iniciar, revisa la documentación de [Enki](https://github.com/Amgelo563/enki-bot) para que sepas cómo funcionan los tag, tag categories y resources. También tiene una versión en español.
 2. Revisa la sección de [Estructura y Convenciones](#-estructura-y-convenciones) para ver cómo están organizados los archivos y otras recomendaciones generales.
+
+3. Finalmente:
+
 **Si sabes sobre GitHub:**
 Crea un fork de este repositorio, aplica tus cambios y crea un Pull Request que podrá ser revisado y aprobado por el staff.
+
 **Si no sabes sobre GitHub:**
 Crea tu archivo o modifica el que quieras y mándaselo por privado a un staff, explicando todo el tema. Nosotros sabremos cómo aplicarlo.
+
