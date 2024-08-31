@@ -40,7 +40,7 @@ jobs:
           cache-dependency-path: enki-bot/pnpm-lock.yaml
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --prod
         working-directory: enki-bot
 
       - name: Build bot
