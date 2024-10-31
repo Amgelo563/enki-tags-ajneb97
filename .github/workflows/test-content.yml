@@ -14,8 +14,12 @@ on:
       - labeled
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  test:
     name: Test Content
     runs-on: ubuntu-latest
     steps:
